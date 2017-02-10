@@ -1601,7 +1601,8 @@
           "type": "File",
           "info": "File of the track.",
           "required": true
-        }, {
+        },
+        {
           "name": "artWorkFile",
           "type": "File",
           "info": "Artwork of the track.",
@@ -1611,6 +1612,12 @@
           "name": "trackSharing",
           "type": "String",
           "info": "Type of sharing. Possible value: public OR private.",
+          "required": false
+        },
+        {
+          "name": "videoUrl",
+          "type": "String",
+          "info": "A link to a video page.",
           "required": false
         },
         {

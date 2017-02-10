@@ -506,6 +506,7 @@ Uploads track.
 | commentable     | Boolean| Track commentable
 | isrc            | String | Track ISRC
 | keySignature    | String | Track key
+| videoUrl        | String | A link to a video page
 
 ## Soundcloud.updateTrack
 Updates uploaded track.

@@ -131,6 +131,12 @@ $app->post('/api/Soundcloud/uploadTrack', function ($request, $response, $args) 
             'contents' => $post_data['args']['isrc']
         ];
     };
+    if (isset($post_data['args']['videoUrl']) && (strlen($post_data['args']['videoUrl']) > 0)) {
+        $body[] = [
+            'name' => 'track[video_url]',
+            'contents' => $post_data['args']['videoUrl']
+        ];
+    };
     if (isset($post_data['args']['keySignature']) && (strlen($post_data['args']['keySignature']) > 0)) {
         $body[] = [
             'name' => 'track[key_signature]',
