@@ -24,14 +24,18 @@ $app->post('/api/Soundcloud/updateUser', function ($request, $response, $args) {
         'name' => 'user[description]',
         'contents' => $post_data['args']['description']
     ];
-    $body[] = [
-        'name' => 'user[website]',
-        'contents' => $post_data['args']['website']
-    ];
-    $body[] = [
-        'name' => 'user[website-title]',
-        'contents' => $post_data['args']['websiteTitle']
-    ];
+    if (isset($post_data['args']['website'])) {
+        $body[] = [
+            'name' => 'user[website]',
+            'contents' => $post_data['args']['website']
+        ];
+    };
+    if (isset($post_data['args']['websiteTitle'])) {
+        $body[] = [
+            'name' => 'user[website-title]',
+            'contents' => $post_data['args']['websiteTitle']
+        ];
+    }
     $body[] = [
         'name' => 'user[avatar_data]',
         'contents' => fopen($post_data['args']['avatar'], 'r'),

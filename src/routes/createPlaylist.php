@@ -4,7 +4,7 @@ $app->post('/api/Soundcloud/createPlaylist', function ($request, $response, $arg
 
     //checking properly formed json
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken', 'playlistTitle', 'playlistType']);
+    $validateRes = $checkRequest->validate($request, ['accessToken', 'playlistTitle']);
     if (!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback'] == 'error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
     } else {
@@ -16,7 +16,7 @@ $app->post('/api/Soundcloud/createPlaylist', function ($request, $response, $arg
     //requesting remote API
     $client = new GuzzleHttp\Client();
     $body['playlist']['title'] = $post_data['args']['playlistTitle'];
-    $body['playlist']['sharing'] = $post_data['args']['playlistType'];
+    $body['playlist']['sharing'] = $post_data['args']['playlistSharing'];
 
     //optional parameters
     $body['playlist']['embeddable_by'] = $post_data['args']['embeddableBy'];
