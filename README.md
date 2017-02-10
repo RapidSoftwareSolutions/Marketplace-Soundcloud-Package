@@ -421,10 +421,10 @@ Check if user if following other user.
 ## Soundcloud.deleteMyWebProfile
 Deletes web-profile of the user.
 
-| Field      | Type  | Description
-|------------|-------|----------
-| accessToken| String| Access Token received from oAuth.
-| profileId  | Number| ID web-profile.
+| Field       | Type  | Description
+|-------------|-------|----------
+| accessToken | String| Access Token received from oAuth.
+| webProfileId| Number| ID web-profile.
 
 ## Soundcloud.createPlaylist
 Creates playlist
@@ -485,6 +485,7 @@ Uploads track.
 | accessToken     | String | Access Token received from oAuth.
 | trackTitle      | String | Title of the track
 | trackFile       | File   | File of the track.
+| artWorkFile     | File   | Artwork of the track.
 | trackSharing    | String | Type of sharing. Possible value: public OR private.
 | embeddableBy    | String | Who can embed this track. Possible value: all OR me OR none.
 | purchaseUrl     | String | External purchase link.

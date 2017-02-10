@@ -1601,6 +1601,11 @@
           "type": "File",
           "info": "File of the track.",
           "required": true
+        }, {
+          "name": "artWorkFile",
+          "type": "File",
+          "info": "Artwork of the track.",
+          "required": false
         },
         {
           "name": "trackSharing",
