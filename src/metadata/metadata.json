@@ -819,7 +819,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         }
       ],
@@ -915,7 +915,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1089,7 +1089,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1119,7 +1119,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1149,7 +1149,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1179,7 +1179,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1203,7 +1203,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1227,7 +1227,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1251,7 +1251,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1281,7 +1281,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1305,7 +1305,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1329,7 +1329,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1455,7 +1455,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1587,7 +1587,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1737,7 +1737,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1893,7 +1893,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1941,7 +1941,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1965,7 +1965,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -1989,7 +1989,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -2025,7 +2025,7 @@
         {
           "name": "accessToken",
           "type": "String",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {

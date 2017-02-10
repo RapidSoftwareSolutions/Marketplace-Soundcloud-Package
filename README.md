@@ -282,7 +282,7 @@ Gets list of registered applications.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getOembed
 The SoundCloud oEmbed endpoint will serve the widget embed code for any SoundCloud URL pointing to a user, set, or a playlist. 
@@ -310,7 +310,7 @@ Create connection representing the external profile (like twitter, tumblr or fac
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | redirectUri| String| Link to the page user has to be redirected.
 | service    | String| The type of the described connection. Possible values: facebook_profile, twitter, myspace.
 
@@ -355,7 +355,7 @@ Gets comment of the track.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | trackId    | Number| ID of the track.
 | commentId  | Number| ID of the comment.
 
@@ -364,7 +364,7 @@ Adds comment to the track.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | trackId    | Number| ID of the track.
 | comment    | String| Content of the comment.
 
@@ -373,7 +373,7 @@ Adds comment to the track.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | trackId    | Number| ID of the track.
 | commentId  | Number| ID of the comment.
 
@@ -382,7 +382,7 @@ Gets users who liked this track.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | trackId    | Number| ID of the track.
 
 ## Soundcloud.getTrackSecretToken
@@ -390,7 +390,7 @@ Gets secret token of the track.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | trackId    | Number| ID of the track.
 
 ## Soundcloud.updateTrackSecretToken
@@ -398,7 +398,7 @@ Updates secret token of the track.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | trackId    | Number| ID of the track.
 
 ## Soundcloud.checkUserFollowing
@@ -406,7 +406,7 @@ Check if user if following other user.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | userId     | Number| ID of the user.
 | followingId| Number| ID of the user who may be followed.
 
@@ -415,7 +415,7 @@ Check if user if following other user.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | followingId| Number| ID of the user who may be followed.
 
 ## Soundcloud.deleteMyWebProfile
@@ -423,7 +423,7 @@ Deletes web-profile of the user.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | profileId  | Number| ID web-profile.
 
 ## Soundcloud.createPlaylist
@@ -431,7 +431,7 @@ Creates playlist
 
 | Field              | Type   | Description
 |--------------------|--------|----------
-| accessToken        | String | The client id belonging to your application.
+| accessToken        | String | Access Token received from oAuth.
 | playlistTitle      | String | Title of the playlist.
 | playlistSharing    | String | Sharing type of the playlist. Possible values: public OR private.
 | tracks             | Array  | Array of tracks IDs to add to the playlist.
@@ -456,7 +456,7 @@ Adds track to playlist.
 
 | Field              | Type   | Description
 |--------------------|--------|----------
-| accessToken        | String | The client id belonging to your application.
+| accessToken        | String | Access Token received from oAuth.
 | playlistId         | Number | Id of the playlist.
 | tracks             | Array  | Array of tracks IDs to add to the playlist.
 | playlistTitle      | String | Title of the playlist.
@@ -482,7 +482,7 @@ Uploads track.
 
 | Field           | Type   | Description
 |-----------------|--------|----------
-| accessToken     | String | The client id belonging to your application.
+| accessToken     | String | Access Token received from oAuth.
 | trackTitle      | String | Title of the track
 | trackFile       | File   | File of the track.
 | trackSharing    | String | Type of sharing. Possible value: public OR private.
@@ -511,7 +511,7 @@ Updates uploaded track.
 
 | Field           | Type   | Description
 |-----------------|--------|----------
-| accessToken     | String | The client id belonging to your application.
+| accessToken     | String | Access Token received from oAuth.
 | trackId         | Number | Id of the track
 | trackTitle      | String | Title of the track
 | trackFile       | File   | File of the track.
@@ -541,7 +541,7 @@ Updates user information.
 
 | Field       | Type  | Description
 |-------------|-------|----------
-| accessToken | String| The client id belonging to your application.
+| accessToken | String| Access Token received from oAuth.
 | username    | String| Username.
 | description | String| Description of the user.
 | website     | String| A URL to the website.
@@ -553,7 +553,7 @@ Deletes single track.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | trackId    | Number| ID of the track.
 
 ## Soundcloud.deleteMyPlaylist
@@ -561,7 +561,7 @@ Deletes single playlist.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | playlistId | Number| ID of the playlist.
 
 ## Soundcloud.createMyWebProfile
@@ -569,7 +569,7 @@ Creates single web-profile.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| The client id belonging to your application.
+| accessToken| String| Access Token received from oAuth.
 | url        | String| Url of the web-profile.
 | username   | String| Username for web-profile.
 | title      | String| Title of the web-profile.
@@ -579,7 +579,7 @@ Updates single web-profile.
 
 | Field       | Type  | Description
 |-------------|-------|----------
-| accessToken | String| The client id belonging to your application.
+| accessToken | String| Access Token received from oAuth.
 | webProfileId| Number| ID of the web-profile.
 | url         | String| Url of the web-profile.
 | title       | String| Title of the web-profile.
