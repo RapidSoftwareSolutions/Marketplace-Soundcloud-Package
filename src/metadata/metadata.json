@@ -1342,7 +1342,7 @@
           "name": "playlistType",
           "type": "String",
           "info": "Sharing type of the playlist. Possible values: public OR private.",
-          "required": true
+          "required": false
         },
         {
           "name": "tracks",
