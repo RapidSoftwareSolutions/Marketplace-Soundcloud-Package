@@ -1969,7 +1969,7 @@
           "required": true
         },
         {
-          "name": "playlist",
+          "name": "playlistId",
           "type": "Number",
           "info": "ID of the playlist.",
           "required": true
