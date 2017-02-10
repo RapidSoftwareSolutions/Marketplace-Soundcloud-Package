@@ -15,25 +15,25 @@ $app->post('/api/Soundcloud/updateUser', function ($request, $response, $args) {
 
     //requesting remote API
     $client = new GuzzleHttp\Client();
-    if (isset($post_data['args']['username'])) {
+    if (isset($post_data['args']['username']) && (strlen($post_data['args']['username'])>0)) {
         $body[] = [
             'name' => 'user[username]',
             'contents' => $post_data['args']['username']
         ];
     };
-    if (isset($post_data['args']['description'])) {
+    if (isset($post_data['args']['description']) && (strlen($post_data['args']['description'])>0)) {
         $body[] = [
             'name' => 'user[description]',
             'contents' => $post_data['args']['description']
         ];
     }
-    if (isset($post_data['args']['website'])) {
+    if (isset($post_data['args']['website']) && (strlen($post_data['args']['website'])>0)) {
         $body[] = [
             'name' => 'user[website]',
             'contents' => $post_data['args']['website']
         ];
     };
-    if (isset($post_data['args']['websiteTitle'])) {
+    if (isset($post_data['args']['websiteTitle']) && (strlen($post_data['args']['websiteTitle'])>0)) {
         $body[] = [
             'name' => 'user[website-title]',
             'contents' => $post_data['args']['websiteTitle']
