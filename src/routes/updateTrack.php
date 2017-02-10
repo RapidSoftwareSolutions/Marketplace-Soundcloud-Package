@@ -11,7 +11,7 @@ $app->post('/api/Soundcloud/updateTrack', function ($request, $response, $args) 
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $query_str = $settings['api_url'] . '/tracks/'.$post_data['args']['trackId'].'?oauth_token=' . $post_data['args']['accessToken'];
+    $query_str = $settings['api_url'] . '/me/tracks/'.$post_data['args']['trackId'].'?oauth_token=' . $post_data['args']['accessToken'];
     $body[] = [
         'name' => 'track[title]',
         'contents' => $post_data['args']['trackTitle']

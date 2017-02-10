@@ -4,14 +4,14 @@ $app->post('/api/Soundcloud/getUsersLikedTrack', function ($request, $response, 
 
     //checking properly formed json
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['clientId', 'trackId']);
+    $validateRes = $checkRequest->validate($request, ['accessToken', 'trackId']);
     if (!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback'] == 'error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
     } else {
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $query_str = $settings['api_url'].'/tracks/'.$post_data['args']['trackId'].'/favoriters?client_id='.$post_data['args']['clientId'];
+    $query_str = $settings['api_url'].'/tracks/'.$post_data['args']['trackId'].'/favoriters?oauth_token='.$post_data['args']['accessToken'];
 
     //requesting remote API
     $client = new GuzzleHttp\Client();

@@ -375,7 +375,7 @@
       ]
     },
     {
-      "name": "getSingleUserLikedTrack",
+      "name": "checkUserLikedTrack",
       "description": "Gets info about single track liked by user.",
       "args": [
         {
@@ -387,7 +387,13 @@
         {
           "name": "trackId",
           "type": "Number",
-          "info": "ID of the track to favorite.",
+          "info": "ID of the track to check.",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "ID of the user to check.",
           "required": true
         }
       ],
@@ -399,7 +405,31 @@
       ]
     },
     {
-      "name": "getWebProfiles",
+      "name": "checkMeLikedTrack",
+      "description": "Gets info about single track liked by current user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token received from oAuth.",
+          "required": true
+        },
+        {
+          "name": "trackId",
+          "type": "Number",
+          "info": "ID of the track to check.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getUserWebProfiles",
       "description": "Gets list of web profiles.",
       "args": [
         {
@@ -424,7 +454,133 @@
     },
     {
       "name": "getMyConnections",
-      "description": "Gets list of connections for the user.",
+      "description": "Gets list of connections for the current user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token received from oAuth.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getMyTracks",
+      "description": "Gets list of tracks for the current user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token received from oAuth.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getMyPlaylists",
+      "description": "Gets list of playlists for the current user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token received from oAuth.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getMyFollowings",
+      "description": "Gets list of users who are followed by the current user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token received from oAuth.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getMyFollowers",
+      "description": "Gets list of users who are following the current user",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token received from oAuth.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getMyComments",
+      "description": "Gets list of comments of the current user",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token received from oAuth.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getTracksLikedByMe",
+      "description": "Gets list of tracks favorited by the current user",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "Access Token received from oAuth.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "getMyWebProfiles",
+      "description": "Gets list of web profiles of the current user",
       "args": [
         {
           "name": "accessToken",
@@ -442,7 +598,7 @@
     },
     {
       "name": "getMyActivities",
-      "description": "Gets list of acitivites for the user.",
+      "description": "Gets list of acitivites for the current user.",
       "args": [
         {
           "name": "accessToken",
@@ -537,13 +693,13 @@
       ]
     },
     {
-      "name": "getSingleComment",
+      "name": "getUserSingleComment",
       "description": "Gets information about single comment.",
       "args": [
         {
-          "name": "clientId",
+          "name": "accessToken",
           "type": "credentials",
-          "info": "The client id belonging to your application.",
+          "info": "Access Token received from oAuth.",
           "required": true
         },
         {
@@ -579,7 +735,7 @@
       ]
     },
     {
-      "name": "getPlaylists",
+      "name": "searchUsers",
       "description": "Gets list of playlists.",
       "args": [
         {
@@ -587,6 +743,42 @@
           "type": "credentials",
           "info": "The client id belonging to your application.",
           "required": true
+        },
+        {
+          "name": "searchString",
+          "type": "String",
+          "info": "A string to search for.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "searchPlaylists",
+      "description": "Gets list of playlists.",
+      "args": [
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "The client id belonging to your application.",
+          "required": true
+        },
+        {
+          "name": "searchString",
+          "type": "String",
+          "info": "A string to search for. When this parameter is used, only compact representations are returned.",
+          "required": false
+        },
+        {
+          "name": "representation",
+          "type": "String",
+          "info": "compact (no track listing) or id (track listing only contains track IDs).",
+          "required": false
         }
       ],
       "callbacks": [
@@ -625,7 +817,7 @@
       "description": "Gets list of registered applications.",
       "args": [
         {
-          "name": "clientId",
+          "name": "accessToken",
           "type": "credentials",
           "info": "The client id belonging to your application.",
           "required": true
@@ -747,7 +939,7 @@
       ]
     },
     {
-      "name": "getTracks",
+      "name": "searchTracks",
       "description": "Gets list of tracks.",
       "args": [
         {
@@ -755,6 +947,84 @@
           "type": "credentials",
           "info": "The client id belonging to your application.",
           "required": true
+        },
+        {
+          "name": "searchString",
+          "type": "String",
+          "info": "A string to search for.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "A comma separated list of tags.",
+          "required": false
+        },
+        {
+          "name": "filter",
+          "type": "String",
+          "info": "Possible values: all, public, private.",
+          "required": false
+        },
+        {
+          "name": "license",
+          "type": "String",
+          "info": "Creative common license. Possible values: no-rights-reserved, all-rights-reserved, cc-by, cc-by-nc, cc-by-nd, cc-by-sa, cc-by-nc-nd, cc-by-nc-sa.",
+          "required": false
+        },
+        {
+          "name": "bpmFrom",
+          "type": "Number",
+          "info": "Return tracks with at least this bpm value.",
+          "required": false
+        },
+        {
+          "name": "bpmTo",
+          "type": "Number",
+          "info": "Return tracks with at most this bpm value.",
+          "required": false
+        },
+        {
+          "name": "durationFrom",
+          "type": "Number",
+          "info": "Return tracks with at least this duration (in millis).",
+          "required": false
+        },
+        {
+          "name": "durationTo",
+          "type": "Number",
+          "info": "Return tracks with at most this duration (in millis).",
+          "required": false
+        },
+        {
+          "name": "createdAtFrom",
+          "type": "String",
+          "info": "(yyyy-mm-dd hh:mm:ss) return tracks created at this date or later.",
+          "required": false
+        },
+        {
+          "name": "createdAtTo",
+          "type": "String",
+          "info": "(yyyy-mm-dd hh:mm:ss) return tracks created at this date or earlier.",
+          "required": false
+        },
+        {
+          "name": "ids",
+          "type": "String",
+          "info": "A comma separated list of track ids to filter on.",
+          "required": false
+        },
+        {
+          "name": "genres",
+          "type": "String",
+          "info": "A comma separated list of genres.",
+          "required": false
+        },
+        {
+          "name": "types",
+          "type": "String",
+          "info": "A comma separated list of types.",
+          "required": false
         }
       ],
       "callbacks": [
@@ -813,11 +1083,11 @@
       ]
     },
     {
-      "name": "getSingleTrackComment",
+      "name": "getTrackSingleComment",
       "description": "Gets comment of the track.",
       "args": [
         {
-          "name": "clientId",
+          "name": "accessToken",
           "type": "credentials",
           "info": "The client id belonging to your application.",
           "required": true
@@ -873,7 +1143,7 @@
       ]
     },
     {
-      "name": "deleteTrackComment",
+      "name": "deleteTrackSingleComment",
       "description": "Adds comment to the track.",
       "args": [
         {
@@ -907,7 +1177,7 @@
       "description": "Gets users who liked this track.",
       "args": [
         {
-          "name": "clientId",
+          "name": "accessToken",
           "type": "credentials",
           "info": "The client id belonging to your application.",
           "required": true
@@ -1005,8 +1275,8 @@
       ]
     },
     {
-      "name": "deleteSingleWebProfile",
-      "description": "Deletes web-profile of the user.",
+      "name": "checkMeFollowing",
+      "description": "Check if user if following other user.",
       "args": [
         {
           "name": "accessToken",
@@ -1015,9 +1285,27 @@
           "required": true
         },
         {
-          "name": "userId",
+          "name": "followingId",
           "type": "Number",
-          "info": "ID of the user.",
+          "info": "ID of the user who may be followed.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "deleteMyWebProfile",
+      "description": "Deletes web-profile of the user.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The client id belonging to your application.",
           "required": true
         },
         {
@@ -1055,6 +1343,102 @@
           "type": "String",
           "info": "Sharing type of the playlist. Possible values: public OR private.",
           "required": true
+        },
+        {
+          "name": "tracks",
+          "type": "Array",
+          "info": "Array of tracks IDs to add to the playlist.",
+          "required": false
+        },
+        {
+          "name": "embeddableBy",
+          "type": "String",
+          "info": "Who can embed this playlist. Possible value: all OR me OR none.",
+          "required": false
+        },
+        {
+          "name": "puchaseUrl",
+          "type": "String",
+          "info": "External purchase link.",
+          "required": false
+        },
+        {
+          "name": "playlistDescription",
+          "type": "String",
+          "info": "HTML description.",
+          "required": false
+        },
+        {
+          "name": "genre",
+          "type": "String",
+          "info": "Genre.",
+          "required": false
+        },
+        {
+          "name": "tagList",
+          "type": "String",
+          "info": "Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.",
+          "required": false
+        },
+        {
+          "name": "labelId",
+          "type": "String",
+          "info": "Id of the label user",
+          "required": false
+        },
+        {
+          "name": "labelName",
+          "type": "String",
+          "info": "Label name",
+          "required": false
+        },
+        {
+          "name": "releaseNumber",
+          "type": "Number",
+          "info": "Release number",
+          "required": false
+        },
+        {
+          "name": "releaseDay",
+          "type": "Number",
+          "info": "Day of the release",
+          "required": false
+        },
+        {
+          "name": "releaseMonth",
+          "type": "Number",
+          "info": "Month of the release",
+          "required": false
+        },
+        {
+          "name": "releaseYear",
+          "type": "Number",
+          "info": "Year of the release",
+          "required": false
+        },
+        {
+          "name": "streamable",
+          "type": "Boolean",
+          "info": "Streamable via API.",
+          "required": false
+        },
+        {
+          "name": "downloadable",
+          "type": "Boolean",
+          "info": "Downloadable",
+          "required": false
+        },
+        {
+          "name": "ean",
+          "type": "Number",
+          "info": "EAN identifier for the playlist",
+          "required": false
+        },
+        {
+          "name": "playlistType",
+          "type": "String",
+          "info": "Playlist type. Possible values: ep single, album, compilation, project files, archive, showcase, demo, sample pack, other",
+          "required": false
         }
       ],
       "callbacks": [
@@ -1084,7 +1468,109 @@
           "name": "tracks",
           "type": "Array",
           "info": "Array of tracks IDs to add to the playlist.",
+          "required": false
+        },
+        {
+          "name": "playlistTitle",
+          "type": "String",
+          "info": "Title of the playlist.",
           "required": true
+        },
+        {
+          "name": "playlistType",
+          "type": "String",
+          "info": "Sharing type of the playlist. Possible values: public OR private.",
+          "required": true
+        },
+        {
+          "name": "embeddableBy",
+          "type": "String",
+          "info": "Who can embed this playlist. Possible value: all OR me OR none.",
+          "required": false
+        },
+        {
+          "name": "puchaseUrl",
+          "type": "String",
+          "info": "External purchase link.",
+          "required": false
+        },
+        {
+          "name": "playlistDescription",
+          "type": "String",
+          "info": "HTML description.",
+          "required": false
+        },
+        {
+          "name": "genre",
+          "type": "String",
+          "info": "Genre.",
+          "required": false
+        },
+        {
+          "name": "tagList",
+          "type": "String",
+          "info": "Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.",
+          "required": false
+        },
+        {
+          "name": "labelId",
+          "type": "String",
+          "info": "Id of the label user",
+          "required": false
+        },
+        {
+          "name": "labelName",
+          "type": "String",
+          "info": "Label name",
+          "required": false
+        },
+        {
+          "name": "releaseNumber",
+          "type": "Number",
+          "info": "Release number",
+          "required": false
+        },
+        {
+          "name": "releaseDay",
+          "type": "Number",
+          "info": "Day of the release",
+          "required": false
+        },
+        {
+          "name": "releaseMonth",
+          "type": "Number",
+          "info": "Month of the release",
+          "required": false
+        },
+        {
+          "name": "releaseYear",
+          "type": "Number",
+          "info": "Year of the release",
+          "required": false
+        },
+        {
+          "name": "streamable",
+          "type": "Boolean",
+          "info": "Streamable via API.",
+          "required": false
+        },
+        {
+          "name": "downloadable",
+          "type": "Boolean",
+          "info": "Downloadable",
+          "required": false
+        },
+        {
+          "name": "ean",
+          "type": "Number",
+          "info": "EAN identifier for the playlist",
+          "required": false
+        },
+        {
+          "name": "playlistType",
+          "type": "String",
+          "info": "Playlist type. Possible values: ep single, album, compilation, project files, archive, showcase, demo, sample pack, other",
+          "required": false
         }
       ],
       "callbacks": [
@@ -1125,7 +1611,7 @@
         {
           "name": "embeddableBy",
           "type": "String",
-          "info": "Who can embed this track or playlist. Possible value: all OR me OR none.",
+          "info": "Who can embed this track. Possible value: all OR me OR none.",
           "required": false
         },
         {
@@ -1449,7 +1935,7 @@
       ]
     },
     {
-      "name": "deleteSingleTrack",
+      "name": "deleteMyTrack",
       "description": "Deletes single track.",
       "args": [
         {
@@ -1473,8 +1959,8 @@
       ]
     },
     {
-      "name": "updateSingleTrackComment",
-      "description": "Updates single track comment.",
+      "name": "deleteMyPlaylist",
+      "description": "Deletes single playlist.",
       "args": [
         {
           "name": "accessToken",
@@ -1483,21 +1969,9 @@
           "required": true
         },
         {
-          "name": "trackId",
+          "name": "Playlist",
           "type": "Number",
-          "info": "ID of the track.",
-          "required": true
-        },
-        {
-          "name": "commentId",
-          "type": "Number",
-          "info": "ID of the comment.",
-          "required": true
-        },
-        {
-          "name": "comment",
-          "type": "String",
-          "info": "Content of the comment.",
+          "info": "ID of the playlist.",
           "required": true
         }
       ],
@@ -1509,7 +1983,43 @@
       ]
     },
     {
-      "name": "updateSingleWebProfile",
+      "name": "createMyWebProfile",
+      "description": "Creates single web-profile.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The client id belonging to your application.",
+          "required": true
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "info": "Url of the web-profile.",
+          "required": true
+        },
+        {
+          "name": "username",
+          "type": "String",
+          "info": "Username for web-profile.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Title of the web-profile.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    },
+    {
+      "name": "updateMyWebProfile",
       "description": "Updates single web-profile.",
       "args": [
         {
@@ -1525,16 +2035,22 @@
           "required": true
         },
         {
-          "name": "title",
-          "type": "String",
-          "info": "Title of the web-profile.",
-          "required": true
-        },
-        {
           "name": "url",
           "type": "String",
           "info": "Url of the web-profile.",
           "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Title of the web-profile.",
+          "required": false
+        },
+        {
+          "name": "username",
+          "type": "String",
+          "info": "Username for web-profile.",
+          "required": false
         }
       ],
       "callbacks": [

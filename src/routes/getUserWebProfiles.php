@@ -1,47 +1,24 @@
 <?php
-$app->post('/api/Soundcloud/createPlaylist', function ($request, $response, $args) {
+$app->post('/api/Soundcloud/getUserWebProfiles', function ($request, $response, $args) {
     $settings = $this->settings;
 
     //checking properly formed json
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken', 'playlistTitle', 'playlistType']);
+    $validateRes = $checkRequest->validate($request, ['clientId', 'userId']);
     if (!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback'] == 'error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
     } else {
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $query_str = $settings['api_url'].'/playlists?oauth_token='.$post_data['args']['accessToken'];
+    $query_str = $settings['api_url'].'/users/'.$post_data['args']['userId'].'/web-profiles?client_id='.$post_data['args']['clientId'];
 
     //requesting remote API
     $client = new GuzzleHttp\Client();
-    $body['playlist']['title'] = $post_data['args']['playlistTitle'];
-    $body['playlist']['sharing'] = $post_data['args']['playlistType'];
-
-    //optional parameters
-    $body['playlist']['embeddable_by'] = $post_data['args']['embeddableBy'];
-    $body['playlist']['purchase_url'] = $post_data['args']['purchaseUrl'];
-    $body['playlist']['description'] = $post_data['args']['playlistDescription'];
-    $body['playlist']['genre'] = $post_data['args']['genre'];
-    $body['playlist']['tag_list'] = $post_data['args']['tagList'];
-    $body['playlist']['label_id'] = $post_data['args']['labelId'];
-    $body['playlist']['label_name'] = $post_data['args']['labelName'];
-    $body['playlist']['release'] = $post_data['args']['releaseNumber'];
-    $body['playlist']['release_day'] = $post_data['args']['releaseDay'];
-    $body['playlist']['release_month'] = $post_data['args']['releaseMonth'];
-    $body['playlist']['release_year'] = $post_data['args']['releaseYear'];
-    $body['playlist']['streamable'] = $post_data['args']['streamable'];
-    $body['playlist']['downloadable'] = $post_data['args']['downloadable'];
-    $body['playlist']['ean'] = $post_data['args']['ean'];
-    $body['playlist']['playlist_type'] = $post_data['args']['playlistType'];
-    foreach ($post_data['args']['tracks'] as $track) {
-        $body['playlist']['tracks'][]['id'] = $track;
-    };
 
     try {
 
-        $resp = $client->post($query_str, [
-            'json' => $body,
+        $resp = $client->get($query_str, [
             'verify' => false
         ]);
 

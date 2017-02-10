@@ -4,7 +4,7 @@ $app->post('/api/Soundcloud/updatePlaylist', function ($request, $response, $arg
 
     //checking properly formed json
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken', 'playlistId', 'tracks']);
+    $validateRes = $checkRequest->validate($request, ['accessToken', 'playlistId']);
     if (!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback'] == 'error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
     } else {
@@ -15,16 +15,32 @@ $app->post('/api/Soundcloud/updatePlaylist', function ($request, $response, $arg
 
     //requesting remote API
     $client = new GuzzleHttp\Client();
+    $body['playlist']['title'] = $post_data['args']['playlistTitle'];
+    $body['playlist']['sharing'] = $post_data['args']['playlistType'];
+    $body['playlist']['embeddable_by'] = $post_data['args']['embeddableBy'];
+    $body['playlist']['purchase_url'] = $post_data['args']['purchaseUrl'];
+    $body['playlist']['description'] = $post_data['args']['playlistDescription'];
+    $body['playlist']['genre'] = $post_data['args']['genre'];
+    $body['playlist']['tag_list'] = $post_data['args']['tagList'];
+    $body['playlist']['label_id'] = $post_data['args']['labelId'];
+    $body['playlist']['label_name'] = $post_data['args']['labelName'];
+    $body['playlist']['release'] = $post_data['args']['releaseNumber'];
+    $body['playlist']['release_day'] = $post_data['args']['releaseDay'];
+    $body['playlist']['release_month'] = $post_data['args']['releaseMonth'];
+    $body['playlist']['release_year'] = $post_data['args']['releaseYear'];
+    $body['playlist']['streamable'] = $post_data['args']['streamable'];
+    $body['playlist']['downloadable'] = $post_data['args']['downloadable'];
+    $body['playlist']['ean'] = $post_data['args']['ean'];
+    $body['playlist']['playlist_type'] = $post_data['args']['playlistType'];
 
-    $tracks = array();
     foreach ($post_data['args']['tracks'] as $track) {
-        $tracks['playlist']['tracks'][]['id'] = $track;
+        $body['playlist']['tracks'][]['id'] = $track;
     };
 
     try {
 
         $resp = $client->put($query_str, [
-            'json' => $tracks,
+            'json' => $body,
             'verify' => false
         ]);
 

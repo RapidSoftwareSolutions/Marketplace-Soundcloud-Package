@@ -1,47 +1,65 @@
 <?php
-$app->post('/api/Soundcloud/createPlaylist', function ($request, $response, $args) {
+$app->post('/api/Soundcloud/searchTracks', function ($request, $response, $args) {
     $settings = $this->settings;
 
     //checking properly formed json
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken', 'playlistTitle', 'playlistType']);
+    $validateRes = $checkRequest->validate($request, ['clientId']);
     if (!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback'] == 'error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
     } else {
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $query_str = $settings['api_url'].'/playlists?oauth_token='.$post_data['args']['accessToken'];
+    $query_str = $settings['api_url'] . '/tracks?client_id=' . $post_data['args']['clientId'];
+
+    //optional search parameters
+    if (isset($post_data['args']['searchString'])) {
+        $query_str .= '&q=' . $post_data['args']['searchString'];
+    };
+    if (isset($post_data['args']['tags'])) {
+        $query_str .= '&tags=' . $post_data['args']['tags'];
+    };
+    if (isset($post_data['args']['filter'])) {
+        $query_str .= '&filter=' . $post_data['args']['filter'];
+    };
+    if (isset($post_data['args']['license'])) {
+        $query_str .= '&license=' . $post_data['args']['license'];
+    };
+    if (isset($post_data['args']['bpm[from]'])) {
+        $query_str .= '&bpm[from]=' . $post_data['args']['bpmFrom'];
+    };
+    if (isset($post_data['args']['bpm[to]'])) {
+        $query_str .= '&bpm[to]=' . $post_data['args']['bpmTo'];
+    };
+    if (isset($post_data['args']['duration[from]'])) {
+        $query_str .= '&duration[from]=' . $post_data['args']['durationFrom'];
+    };
+    if (isset($post_data['args']['duration[to]'])) {
+        $query_str .= '&duration[to]=' . $post_data['args']['durationTo'];
+    };
+    if (isset($post_data['args']['created_at[from]'])) {
+        $query_str .= '&created_at[from]=' . $post_data['args']['createdAtFrom'];
+    };
+    if (isset($post_data['args']['created_at[to]'])) {
+        $query_str .= '&created_at[to]=' . $post_data['args']['createdAtTo'];
+    };
+    if (isset($post_data['args']['ids'])) {
+        $query_str .= '&ids=' . $post_data['args']['ids'];
+    };
+    if (isset($post_data['args']['genres'])) {
+        $query_str .= '&genres=' . $post_data['args']['genres'];
+    };
+    if (isset($post_data['args']['types'])) {
+        $query_str .= '&types=' . $post_data['args']['types'];
+    };
 
     //requesting remote API
     $client = new GuzzleHttp\Client();
-    $body['playlist']['title'] = $post_data['args']['playlistTitle'];
-    $body['playlist']['sharing'] = $post_data['args']['playlistType'];
-
-    //optional parameters
-    $body['playlist']['embeddable_by'] = $post_data['args']['embeddableBy'];
-    $body['playlist']['purchase_url'] = $post_data['args']['purchaseUrl'];
-    $body['playlist']['description'] = $post_data['args']['playlistDescription'];
-    $body['playlist']['genre'] = $post_data['args']['genre'];
-    $body['playlist']['tag_list'] = $post_data['args']['tagList'];
-    $body['playlist']['label_id'] = $post_data['args']['labelId'];
-    $body['playlist']['label_name'] = $post_data['args']['labelName'];
-    $body['playlist']['release'] = $post_data['args']['releaseNumber'];
-    $body['playlist']['release_day'] = $post_data['args']['releaseDay'];
-    $body['playlist']['release_month'] = $post_data['args']['releaseMonth'];
-    $body['playlist']['release_year'] = $post_data['args']['releaseYear'];
-    $body['playlist']['streamable'] = $post_data['args']['streamable'];
-    $body['playlist']['downloadable'] = $post_data['args']['downloadable'];
-    $body['playlist']['ean'] = $post_data['args']['ean'];
-    $body['playlist']['playlist_type'] = $post_data['args']['playlistType'];
-    foreach ($post_data['args']['tracks'] as $track) {
-        $body['playlist']['tracks'][]['id'] = $track;
-    };
 
     try {
 
-        $resp = $client->post($query_str, [
-            'json' => $body,
+        $resp = $client->get($query_str, [
             'verify' => false
         ]);
 
