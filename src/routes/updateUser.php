@@ -39,28 +39,28 @@ $app->post('/api/Soundcloud/updateUser', function ($request, $response, $args) {
             'contents' => $post_data['args']['websiteTitle']
         ];
     };
-    if (isset($post_data['args']['avatar'])) {
+    if (isset($post_data['args']['avatar']) && (strlen($post_data['args']['avatar'])>0)) {
         $body[] = [
             'name' => 'user[avatar_data]',
             'contents' => fopen($post_data['args']['avatar'], 'r'),
             'filename' => 'avatar.jpg'
         ];
-    }
+    };
 
     try {
 
-//        $resp = $client->request('PUT', $query_str, [
-//            'multipart' => $body,
-//            'verify' => false
-//        ]);
-//
-//        $responseBody = $resp->getBody()->getContents();
-//        $rawBody = json_decode($resp->getBody());
+        $resp = $client->request('PUT', $query_str, [
+            'multipart' => $body,
+            'verify' => false
+        ]);
+
+        $responseBody = $resp->getBody()->getContents();
+        $rawBody = json_decode($resp->getBody());
 
         $all_data[] = $rawBody;
         if ($response->getStatusCode() == '200') {
             $result['callback'] = 'success';
-            $result['contextWrites']['to'] = $post_data['args']['avatar'];//is_array($all_data) ? $all_data : json_decode($all_data);
+            $result['contextWrites']['to'] = is_array($all_data) ? $all_data : json_decode($all_data);
         } else {
             $result['callback'] = 'error';
             $result['contextWrites']['to']['status_code'] = 'API_ERROR';
