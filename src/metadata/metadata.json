@@ -1309,7 +1309,7 @@
           "required": true
         },
         {
-          "name": "profileId",
+          "name": "webProfileId",
           "type": "Number",
           "info": "ID web-profile.",
           "required": true

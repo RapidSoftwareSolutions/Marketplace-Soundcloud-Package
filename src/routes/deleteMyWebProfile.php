@@ -4,14 +4,14 @@ $app->post('/api/Soundcloud/deleteMyWebProfile', function ($request, $response, 
 
     //checking properly formed json
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken', 'profileId']);
+    $validateRes = $checkRequest->validate($request, ['accessToken', 'webProfileId']);
     if (!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback'] == 'error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
     } else {
         $post_data = $validateRes;
     }
     //forming request to vendor API
-    $query_str = $settings['api_url'] . '/me/web-profiles/' . $post_data['args']['profileId'] . '?oauth_token=' . $post_data['args']['accessToken'];
+    $query_str = $settings['api_url'] . '/me/web-profiles/' . $post_data['args']['webProfileId'] . '?oauth_token=' . $post_data['args']['accessToken'];
 
     //requesting remote API
     $client = new GuzzleHttp\Client();
