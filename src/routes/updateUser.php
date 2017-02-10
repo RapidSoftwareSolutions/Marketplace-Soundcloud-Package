@@ -15,15 +15,18 @@ $app->post('/api/Soundcloud/updateUser', function ($request, $response, $args) {
 
     //requesting remote API
     $client = new GuzzleHttp\Client();
-
-    $body[] = [
-        'name' => 'user[username]',
-        'contents' => $post_data['args']['username']
-    ];
-    $body[] = [
-        'name' => 'user[description]',
-        'contents' => $post_data['args']['description']
-    ];
+    if (isset($post_data['args']['username'])) {
+        $body[] = [
+            'name' => 'user[username]',
+            'contents' => $post_data['args']['username']
+        ];
+    };
+    if (isset($post_data['args']['description'])) {
+        $body[] = [
+            'name' => 'user[description]',
+            'contents' => $post_data['args']['description']
+        ];
+    }
     if (isset($post_data['args']['website'])) {
         $body[] = [
             'name' => 'user[website]',
@@ -35,12 +38,14 @@ $app->post('/api/Soundcloud/updateUser', function ($request, $response, $args) {
             'name' => 'user[website-title]',
             'contents' => $post_data['args']['websiteTitle']
         ];
+    };
+    if (isset($post_data['args']['avatar'])) {
+        $body[] = [
+            'name' => 'user[avatar_data]',
+            'contents' => fopen($post_data['args']['avatar'], 'r'),
+            'filename' => 'avatar.jpg'
+        ];
     }
-    $body[] = [
-        'name' => 'user[avatar_data]',
-        'contents' => fopen($post_data['args']['avatar'], 'r'),
-        'filename' => 'avatar.jpg'
-    ];
 
     try {
 
