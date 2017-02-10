@@ -16,7 +16,7 @@ $app->post('/api/Soundcloud/updatePlaylist', function ($request, $response, $arg
     //requesting remote API
     $client = new GuzzleHttp\Client();
     $body['playlist']['title'] = $post_data['args']['playlistTitle'];
-    $body['playlist']['sharing'] = $post_data['args']['playlistType'];
+    $body['playlist']['sharing'] = $post_data['args']['playlistSharing'];
     $body['playlist']['embeddable_by'] = $post_data['args']['embeddableBy'];
     $body['playlist']['purchase_url'] = $post_data['args']['purchaseUrl'];
     $body['playlist']['description'] = $post_data['args']['playlistDescription'];

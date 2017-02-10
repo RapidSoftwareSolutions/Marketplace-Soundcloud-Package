@@ -32,9 +32,9 @@ Refreshes expired token.
 ## Soundcloud.getMe
 Gets information about the authenticated user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getSingleUser
 Gets information about single user.
@@ -71,26 +71,26 @@ Gets list of users who are followed by the user.
 ## Soundcloud.followUser
 Adds user to followed.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| followingId| Number     | ID of the user to follow.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| followingId| Number| ID of the user to follow.
 
 ## Soundcloud.unfollowUser
 Removes user from followed .
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| followingId| Number     | ID of the user to stop following.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| followingId| Number| ID of the user to stop following.
 
 ## Soundcloud.getUserFollowers
 Gets list of users who are following the user.
 
-| Field   | Type       | Description
-|---------|------------|----------
-| clientId| credentials| The client id belonging to your application.
-| userId  | Number     | ID of the user.
+| Field   | Type  | Description
+|---------|-------|----------
+| clientId| String| The client id belonging to your application.
+| userId  | Number| ID of the user.
 
 ## Soundcloud.getUserComments
 Gets list of comments from this user.
@@ -111,35 +111,35 @@ Gets list of comments from this user.
 ## Soundcloud.likeTrack
 Adds track to favorites
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| trackId    | Number     | ID of the track to favorite.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| trackId    | Number| ID of the track to favorite.
 
 ## Soundcloud.unlikeTrack
 Removes track from favorites
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| trackId    | Number     | ID of the track to favorite.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| trackId    | Number| ID of the track to favorite.
 
 ## Soundcloud.checkUserLikedTrack
 Gets info about single track liked by user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| trackId    | Number     | ID of the track to check.
-| userId     | Number     | ID of the user to check.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| trackId    | Number| ID of the track to check.
+| userId     | Number| ID of the user to check.
 
 ## Soundcloud.checkMeLikedTrack
 Gets info about single track liked by current user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| trackId    | Number     | ID of the track to check.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| trackId    | Number| ID of the track to check.
 
 ## Soundcloud.getUserWebProfiles
 Gets list of web profiles.
@@ -152,98 +152,98 @@ Gets list of web profiles.
 ## Soundcloud.getMyConnections
 Gets list of connections for the current user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getMyTracks
 Gets list of tracks for the current user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getMyPlaylists
 Gets list of playlists for the current user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getMyFollowings
 Gets list of users who are followed by the current user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getMyFollowers
 Gets list of users who are following the current user
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getMyComments
 Gets list of comments of the current user
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getTracksLikedByMe
 Gets list of tracks favorited by the current user
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getMyWebProfiles
 Gets list of web profiles of the current user
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
 
 ## Soundcloud.getMyActivities
 Gets list of acitivites for the current user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| limit      | Number     | Number of activities to return.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| limit      | Number| Number of activities to return.
 
 ## Soundcloud.getMyFollowedUsersRecentTracks
 Gets recent tracks from users the logged-in user follows.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| limit      | Number     | Number of activities to return.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| limit      | Number| Number of activities to return.
 
 ## Soundcloud.getMySharedTracks
 Gets recent exclusively shared tracks.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| limit      | Number     | Number of activities to return.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| limit      | Number| Number of activities to return.
 
 ## Soundcloud.getMyRecentTracksActivities
 Gets recent activities on the logged-in users tracks.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| limit      | Number     | Number of activities to return.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| limit      | Number| Number of activities to return.
 
 ## Soundcloud.getUserSingleComment
 Gets information about single comment.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| Access Token received from oAuth.
-| commentId  | Number     | ID of the comment.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| Access Token received from oAuth.
+| commentId  | Number| ID of the comment.
 
 ## Soundcloud.getComments
 Gets list of comments.
@@ -280,9 +280,9 @@ Gets information about single playlist.
 ## Soundcloud.getRegisteredClientApplication
 Gets list of registered applications.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
 
 ## Soundcloud.getOembed
 The SoundCloud oEmbed endpoint will serve the widget embed code for any SoundCloud URL pointing to a user, set, or a playlist. 
@@ -308,11 +308,11 @@ The resolve resource allows you to lookup and access API resources when you only
 ## Soundcloud.createMyConnection
 Create connection representing the external profile (like twitter, tumblr or facebook profiles and pages)
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| redirectUri| String     | Link to the page user has to be redirected.
-| service    | String     | The type of the described connection. Possible values: facebook_profile, twitter, myspace.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| redirectUri| String| Link to the page user has to be redirected.
+| service    | String| The type of the described connection. Possible values: facebook_profile, twitter, myspace.
 
 ## Soundcloud.searchTracks
 Gets list of tracks.
@@ -353,235 +353,235 @@ Gets comments of the track.
 ## Soundcloud.getTrackSingleComment
 Gets comment of the track.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| trackId    | Number     | ID of the track.
-| commentId  | Number     | ID of the comment.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| trackId    | Number| ID of the track.
+| commentId  | Number| ID of the comment.
 
 ## Soundcloud.addTrackComment
 Adds comment to the track.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| trackId    | Number     | ID of the track.
-| comment    | String     | Content of the comment.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| trackId    | Number| ID of the track.
+| comment    | String| Content of the comment.
 
 ## Soundcloud.deleteTrackSingleComment
 Adds comment to the track.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| trackId    | Number     | ID of the track.
-| commentId  | Number     | ID of the comment.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| trackId    | Number| ID of the track.
+| commentId  | Number| ID of the comment.
 
 ## Soundcloud.getUsersLikedTrack
 Gets users who liked this track.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| trackId    | Number     | ID of the track.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| trackId    | Number| ID of the track.
 
 ## Soundcloud.getTrackSecretToken
 Gets secret token of the track.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| trackId    | Number     | ID of the track.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| trackId    | Number| ID of the track.
 
 ## Soundcloud.updateTrackSecretToken
 Updates secret token of the track.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| trackId    | Number     | ID of the track.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| trackId    | Number| ID of the track.
 
 ## Soundcloud.checkUserFollowing
 Check if user if following other user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| userId     | Number     | ID of the user.
-| followingId| Number     | ID of the user who may be followed.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| userId     | Number| ID of the user.
+| followingId| Number| ID of the user who may be followed.
 
 ## Soundcloud.checkMeFollowing
 Check if user if following other user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| followingId| Number     | ID of the user who may be followed.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| followingId| Number| ID of the user who may be followed.
 
 ## Soundcloud.deleteMyWebProfile
 Deletes web-profile of the user.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| profileId  | Number     | ID web-profile.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| profileId  | Number| ID web-profile.
 
 ## Soundcloud.createPlaylist
 Creates playlist
 
-| Field              | Type       | Description
-|--------------------|------------|----------
-| accessToken        | credentials| The client id belonging to your application.
-| playlistTitle      | String     | Title of the playlist.
-| playlistType       | String     | Sharing type of the playlist. Possible values: public OR private.
-| tracks             | Array      | Array of tracks IDs to add to the playlist.
-| embeddableBy       | String     | Who can embed this playlist. Possible value: all OR me OR none.
-| puchaseUrl         | String     | External purchase link.
-| playlistDescription| String     | HTML description.
-| genre              | String     | Genre.
-| tagList            | String     | Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.
-| labelId            | String     | Id of the label user
-| labelName          | String     | Label name
-| releaseNumber      | Number     | Release number
-| releaseDay         | Number     | Day of the release
-| releaseMonth       | Number     | Month of the release
-| releaseYear        | Number     | Year of the release
-| streamable         | Boolean    | Streamable via API.
-| downloadable       | Boolean    | Downloadable
-| ean                | Number     | EAN identifier for the playlist
-| playlistType       | String     | Playlist type. Possible values: ep single, album, compilation, project files, archive, showcase, demo, sample pack, other
+| Field              | Type   | Description
+|--------------------|--------|----------
+| accessToken        | String | The client id belonging to your application.
+| playlistTitle      | String | Title of the playlist.
+| playlistSharing    | String | Sharing type of the playlist. Possible values: public OR private.
+| tracks             | Array  | Array of tracks IDs to add to the playlist.
+| embeddableBy       | String | Who can embed this playlist. Possible value: all OR me OR none.
+| puchaseUrl         | String | External purchase link.
+| playlistDescription| String | HTML description.
+| genre              | String | Genre.
+| tagList            | String | Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.
+| labelId            | String | Id of the label user
+| labelName          | String | Label name
+| releaseNumber      | Number | Release number
+| releaseDay         | Number | Day of the release
+| releaseMonth       | Number | Month of the release
+| releaseYear        | Number | Year of the release
+| streamable         | Boolean| Streamable via API.
+| downloadable       | Boolean| Downloadable
+| ean                | Number | EAN identifier for the playlist
+| playlistType       | String | Playlist type. Possible values: ep single, album, compilation, project files, archive, showcase, demo, sample pack, other
 
 ## Soundcloud.updatePlaylist
 Adds track to playlist.
 
-| Field              | Type       | Description
-|--------------------|------------|----------
-| accessToken        | credentials| The client id belonging to your application.
-| playlistId         | Number     | Id of the playlist.
-| tracks             | Array      | Array of tracks IDs to add to the playlist.
-| playlistTitle      | String     | Title of the playlist.
-| playlistType       | String     | Sharing type of the playlist. Possible values: public OR private.
-| embeddableBy       | String     | Who can embed this playlist. Possible value: all OR me OR none.
-| puchaseUrl         | String     | External purchase link.
-| playlistDescription| String     | HTML description.
-| genre              | String     | Genre.
-| tagList            | String     | Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.
-| labelId            | String     | Id of the label user
-| labelName          | String     | Label name
-| releaseNumber      | Number     | Release number
-| releaseDay         | Number     | Day of the release
-| releaseMonth       | Number     | Month of the release
-| releaseYear        | Number     | Year of the release
-| streamable         | Boolean    | Streamable via API.
-| downloadable       | Boolean    | Downloadable
-| ean                | Number     | EAN identifier for the playlist
-| playlistType       | String     | Playlist type. Possible values: ep single, album, compilation, project files, archive, showcase, demo, sample pack, other
+| Field              | Type   | Description
+|--------------------|--------|----------
+| accessToken        | String | The client id belonging to your application.
+| playlistId         | Number | Id of the playlist.
+| tracks             | Array  | Array of tracks IDs to add to the playlist.
+| playlistTitle      | String | Title of the playlist.
+| playlistSharing    | String | Sharing type of the playlist. Possible values: public OR private.
+| embeddableBy       | String | Who can embed this playlist. Possible value: all OR me OR none.
+| puchaseUrl         | String | External purchase link.
+| playlistDescription| String | HTML description.
+| genre              | String | Genre.
+| tagList            | String | Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.
+| labelId            | String | Id of the label user
+| labelName          | String | Label name
+| releaseNumber      | Number | Release number
+| releaseDay         | Number | Day of the release
+| releaseMonth       | Number | Month of the release
+| releaseYear        | Number | Year of the release
+| streamable         | Boolean| Streamable via API.
+| downloadable       | Boolean| Downloadable
+| ean                | Number | EAN identifier for the playlist
+| playlistType       | String | Playlist type. Possible values: ep single, album, compilation, project files, archive, showcase, demo, sample pack, other
 
 ## Soundcloud.uploadTrack
 Uploads track.
 
-| Field           | Type       | Description
-|-----------------|------------|----------
-| accessToken     | credentials| The client id belonging to your application.
-| trackTitle      | String     | Title of the track
-| trackFile       | File       | File of the track.
-| trackSharing    | String     | Type of sharing. Possible value: public OR private.
-| embeddableBy    | String     | Who can embed this track. Possible value: all OR me OR none.
-| purchaseUrl     | String     | External purchase link.
-| trackDescription| String     | HTML description.
-| genre           | String     | Genre
-| tagList         | String     | Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.
-| labelId         | String     | Id of the label user
-| labelName       | String     | Label name
-| releaseNumber   | Number     | Release number
-| releaseDay      | Number     | Day of the release
-| releaseMonth    | Number     | Month of the release
-| releaseYear     | Number     | Year of the release
-| streamable      | Boolean    | Streamable via API.
-| downloadable    | Boolean    | Downloadable
-| trackType       | String     | Track type. Possible values: original, remix, live, recording, spoken, podcast, demo, in progress, stem, loop, sound effect, sample, other
-| license         | String     | Creative common license. Possible values: no-rights-reserved, all-rights-reserved, cc-by, cc-by-nc, cc-by-nd, cc-by-sa, cc-by-nc-nd, cc-by-nc-sa
-| bpm             | Number     | Beats per minute
-| commentable     | Boolean    | Track commentable
-| isrc            | String     | Track ISRC
-| keySignature    | String     | Track key
+| Field           | Type   | Description
+|-----------------|--------|----------
+| accessToken     | String | The client id belonging to your application.
+| trackTitle      | String | Title of the track
+| trackFile       | File   | File of the track.
+| trackSharing    | String | Type of sharing. Possible value: public OR private.
+| embeddableBy    | String | Who can embed this track. Possible value: all OR me OR none.
+| purchaseUrl     | String | External purchase link.
+| trackDescription| String | HTML description.
+| genre           | String | Genre
+| tagList         | String | Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.
+| labelId         | String | Id of the label user
+| labelName       | String | Label name
+| releaseNumber   | Number | Release number
+| releaseDay      | Number | Day of the release
+| releaseMonth    | Number | Month of the release
+| releaseYear     | Number | Year of the release
+| streamable      | Boolean| Streamable via API.
+| downloadable    | Boolean| Downloadable
+| trackType       | String | Track type. Possible values: original, remix, live, recording, spoken, podcast, demo, in progress, stem, loop, sound effect, sample, other
+| license         | String | Creative common license. Possible values: no-rights-reserved, all-rights-reserved, cc-by, cc-by-nc, cc-by-nd, cc-by-sa, cc-by-nc-nd, cc-by-nc-sa
+| bpm             | Number | Beats per minute
+| commentable     | Boolean| Track commentable
+| isrc            | String | Track ISRC
+| keySignature    | String | Track key
 
 ## Soundcloud.updateTrack
 Updates uploaded track.
 
-| Field           | Type       | Description
-|-----------------|------------|----------
-| accessToken     | credentials| The client id belonging to your application.
-| trackId         | Number     | Id of the track
-| trackTitle      | String     | Title of the track
-| trackFile       | File       | File of the track.
-| trackSharing    | String     | Type of sharing. Possible value: public OR private.
-| embeddableBy    | String     | Who can embed this track or playlist. Possible value: all OR me OR none.
-| purchaseUrl     | String     | External purchase link.
-| trackDescription| String     | HTML description.
-| genre           | String     | Genre
-| tagList         | String     | Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.
-| labelId         | String     | Id of the label user
-| labelName       | String     | Label name
-| releaseNumber   | Number     | Release number
-| releaseDay      | Number     | Day of the release
-| releaseMonth    | Number     | Month of the release
-| releaseYear     | Number     | Year of the release
-| streamable      | Boolean    | Streamable via API.
-| downloadable    | Boolean    | Downloadable
-| trackType       | String     | Track type. Possible values: original, remix, live, recording, spoken, podcast, demo, in progress, stem, loop, sound effect, sample, other
-| license         | String     | Creative common license. Possible values: no-rights-reserved, all-rights-reserved, cc-by, cc-by-nc, cc-by-nd, cc-by-sa, cc-by-nc-nd, cc-by-nc-sa
-| bpm             | Number     | Beats per minute
-| commentable     | Boolean    | Track commentable
-| isrc            | String     | Track ISRC
-| keySignature    | String     | Track key
+| Field           | Type   | Description
+|-----------------|--------|----------
+| accessToken     | String | The client id belonging to your application.
+| trackId         | Number | Id of the track
+| trackTitle      | String | Title of the track
+| trackFile       | File   | File of the track.
+| trackSharing    | String | Type of sharing. Possible value: public OR private.
+| embeddableBy    | String | Who can embed this track or playlist. Possible value: all OR me OR none.
+| purchaseUrl     | String | External purchase link.
+| trackDescription| String | HTML description.
+| genre           | String | Genre
+| tagList         | String | Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.
+| labelId         | String | Id of the label user
+| labelName       | String | Label name
+| releaseNumber   | Number | Release number
+| releaseDay      | Number | Day of the release
+| releaseMonth    | Number | Month of the release
+| releaseYear     | Number | Year of the release
+| streamable      | Boolean| Streamable via API.
+| downloadable    | Boolean| Downloadable
+| trackType       | String | Track type. Possible values: original, remix, live, recording, spoken, podcast, demo, in progress, stem, loop, sound effect, sample, other
+| license         | String | Creative common license. Possible values: no-rights-reserved, all-rights-reserved, cc-by, cc-by-nc, cc-by-nd, cc-by-sa, cc-by-nc-nd, cc-by-nc-sa
+| bpm             | Number | Beats per minute
+| commentable     | Boolean| Track commentable
+| isrc            | String | Track ISRC
+| keySignature    | String | Track key
 
 ## Soundcloud.updateUser
 Updates user information.
 
-| Field       | Type       | Description
-|-------------|------------|----------
-| accessToken | credentials| The client id belonging to your application.
-| username    | String     | Username.
-| description | String     | Description of the user.
-| website     | String     | A URL to the website.
-| websiteTitle| String     | A custom title for the website.
-| avatar      | File       | User avatar.
+| Field       | Type  | Description
+|-------------|-------|----------
+| accessToken | String| The client id belonging to your application.
+| username    | String| Username.
+| description | String| Description of the user.
+| website     | String| A URL to the website.
+| websiteTitle| String| A custom title for the website.
+| avatar      | File  | User avatar.
 
 ## Soundcloud.deleteMyTrack
 Deletes single track.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| trackId    | Number     | ID of the track.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| trackId    | Number| ID of the track.
 
 ## Soundcloud.deleteMyPlaylist
 Deletes single playlist.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| Playlist   | Number     | ID of the playlist.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| playlistId | Number| ID of the playlist.
 
 ## Soundcloud.createMyWebProfile
 Creates single web-profile.
 
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The client id belonging to your application.
-| url        | String     | Url of the web-profile.
-| username   | String     | Username for web-profile.
-| title      | String     | Title of the web-profile.
+| Field      | Type  | Description
+|------------|-------|----------
+| accessToken| String| The client id belonging to your application.
+| url        | String| Url of the web-profile.
+| username   | String| Username for web-profile.
+| title      | String| Title of the web-profile.
 
 ## Soundcloud.updateMyWebProfile
 Updates single web-profile.
 
-| Field       | Type       | Description
-|-------------|------------|----------
-| accessToken | credentials| The client id belonging to your application.
-| webProfileId| Number     | ID of the web-profile.
-| url         | String     | Url of the web-profile.
-| title       | String     | Title of the web-profile.
-| username    | String     | Username for web-profile.
+| Field       | Type  | Description
+|-------------|-------|----------
+| accessToken | String| The client id belonging to your application.
+| webProfileId| Number| ID of the web-profile.
+| url         | String| Url of the web-profile.
+| title       | String| Title of the web-profile.
+| username    | String| Username for web-profile.
 

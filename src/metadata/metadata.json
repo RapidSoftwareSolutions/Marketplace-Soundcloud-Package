@@ -1339,7 +1339,7 @@
           "required": true
         },
         {
-          "name": "playlistType",
+          "name": "playlistSharing",
           "type": "String",
           "info": "Sharing type of the playlist. Possible values: public OR private.",
           "required": false
@@ -1477,10 +1477,10 @@
           "required": true
         },
         {
-          "name": "playlistType",
+          "name": "playlistSharing",
           "type": "String",
           "info": "Sharing type of the playlist. Possible values: public OR private.",
-          "required": true
+          "required": false
         },
         {
           "name": "embeddableBy",
