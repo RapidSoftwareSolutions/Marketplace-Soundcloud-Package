@@ -12,7 +12,7 @@ $app->post('/api/Soundcloud/getMyFollowedUsersRecentTracks', function ($request,
     }
     //forming request to vendor API
     $query_str = $settings['api_url'].'/me/activities/tracks/affiliated?oauth_token='.$post_data['args']['accessToken'];
-    if (isset($post_data['args']['limit'])){
+    if (isset($post_data['args']['limit']) && strlen($post_data['args']['limit']) > 0){
         $query_str.= '&limit='.$post_data['args']['limit'];
     }
     //requesting remote API
