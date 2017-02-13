@@ -736,7 +736,7 @@
     },
     {
       "name": "searchUsers",
-      "description": "Gets list of playlists.",
+      "description": "Gets list of users.",
       "args": [
         {
           "name": "clientId",
