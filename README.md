@@ -1,3 +1,4 @@
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Soundcloud/functions?utm_source=RapidAPIGitHub_SoundcloudFunctions&utm_medium=button&utm_content=RapidAPI_GitHub) 
 # Soundcloud Package
 Integrate SoundCloud user, track and playlist information.
 * Domain: soundcloud.com
