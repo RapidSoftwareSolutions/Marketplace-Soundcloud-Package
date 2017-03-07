@@ -49,12 +49,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "refreshToken",
@@ -85,12 +86,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMe",
@@ -103,12 +105,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getSingleUser",
@@ -127,12 +130,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getUserTracks",
@@ -151,12 +155,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getUserPlaylists",
@@ -175,12 +180,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getUserFollowings",
@@ -199,12 +205,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "followUser",
@@ -223,12 +230,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "unfollowUser",
@@ -247,12 +255,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getUserFollowers",
@@ -271,12 +280,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getUserComments",
@@ -295,12 +305,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getTracksLikedByUser",
@@ -319,12 +330,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "likeTrack",
@@ -343,12 +355,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "unlikeTrack",
@@ -367,12 +380,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "checkUserLikedTrack",
@@ -397,12 +411,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "checkMeLikedTrack",
@@ -421,12 +436,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getUserWebProfiles",
@@ -445,12 +461,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyConnections",
@@ -463,12 +480,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyTracks",
@@ -481,12 +499,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyPlaylists",
@@ -499,12 +518,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyFollowings",
@@ -517,12 +537,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyFollowers",
@@ -535,12 +556,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyComments",
@@ -553,12 +575,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getTracksLikedByMe",
@@ -571,12 +594,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyWebProfiles",
@@ -589,12 +613,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyActivities",
@@ -613,12 +638,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyFollowedUsersRecentTracks",
@@ -637,12 +663,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMySharedTracks",
@@ -661,12 +688,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getMyRecentTracksActivities",
@@ -685,12 +713,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getUserSingleComment",
@@ -709,12 +738,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getComments",
@@ -727,12 +757,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "searchUsers",
@@ -751,12 +782,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "searchPlaylists",
@@ -781,12 +813,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getSinglePlaylist",
@@ -805,12 +838,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getRegisteredClientApplication",
@@ -823,12 +857,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getOembed",
@@ -877,12 +912,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "resolveResourcesFromURL",
@@ -901,12 +937,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "createMyConnection",
@@ -931,12 +968,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "searchTracks",
@@ -1027,12 +1065,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getSingleTrack",
@@ -1051,12 +1090,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getTrackComments",
@@ -1075,12 +1115,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getTrackSingleComment",
@@ -1105,12 +1146,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "addTrackComment",
@@ -1135,12 +1177,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "deleteTrackSingleComment",
@@ -1165,12 +1208,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getUsersLikedTrack",
@@ -1189,12 +1233,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "getTrackSecretToken",
@@ -1213,12 +1258,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "updateTrackSecretToken",
@@ -1237,12 +1283,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "checkUserFollowing",
@@ -1267,12 +1314,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "checkMeFollowing",
@@ -1291,12 +1339,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "deleteMyWebProfile",
@@ -1315,12 +1364,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "createPlaylist",
@@ -1441,12 +1491,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "updatePlaylist",
@@ -1573,12 +1624,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "uploadTrack",
@@ -1735,12 +1787,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "updateTrack",
@@ -1891,12 +1944,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "updateUser",
@@ -1939,12 +1993,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "deleteMyTrack",
@@ -1963,12 +2018,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "deleteMyPlaylist",
@@ -1987,12 +2043,13 @@
           "required": true
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "createMyWebProfile",
@@ -2023,12 +2080,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     },
     {
       "name": "updateMyWebProfile",
@@ -2065,12 +2123,13 @@
           "required": false
         }
       ],
-      "callbacks": [
-        {
-          "name": "error",
-          "info": "error"
-        }
-      ]
+     "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
     }
   ]
 }
