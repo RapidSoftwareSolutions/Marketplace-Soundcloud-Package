@@ -48,10 +48,19 @@ $app->post('/api/Soundcloud/uploadTrack', function ($request, $response, $args) 
         ];
     };
     if (isset($post_data['args']['tagList']) && (strlen($post_data['args']['tagList']) > 0)) {
-        $body[] = [
-            'name' => 'track[tag_list]',
-            'contents' => $post_data['args']['tagList']
-        ];
+
+        if (is_array($post_data['args']['tagList'])) {
+            $body[] = [
+                'name' => 'track[tag_list]',
+                'contents' => implode(',', $post_data['args']['tagList'])
+            ];
+        } else {
+            $body[] = [
+                'name' => 'track[tag_list]',
+                'contents' => $post_data['args']['tagList']
+            ];
+        }
+
     };
     if (isset($post_data['args']['labelId']) && (strlen($post_data['args']['labelId']) > 0)) {
         $body[] = [

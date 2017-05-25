@@ -36,10 +36,17 @@ $app->post('/api/Soundcloud/updateTrack', function ($request, $response, $args) 
         'name' => 'track[genre]',
         'contents' => $post_data['args']['genre']
     ];
-    $body[] = [
-        'name' => 'track[tag_list]',
-        'contents' => $post_data['args']['tagList']
-    ];
+    if (is_array($post_data['args']['tagList'])) {
+        $body[] = [
+            'name' => 'track[tag_list]',
+            'contents' => implode(',', $post_data['args']['tagList'])
+        ];
+    } else {
+        $body[] = [
+            'name' => 'track[tag_list]',
+            'contents' => $post_data['args']['tagList']
+        ];
+    }
     $body[] = [
         'name' => 'track[label_id]',
         'contents' => $post_data['args']['labelId']

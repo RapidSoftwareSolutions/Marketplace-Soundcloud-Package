@@ -808,7 +808,8 @@
         },
         {
           "name": "representation",
-          "type": "String",
+          "type": "Select",
+          "options": ["compact", "id"],
           "info": "compact (no track listing) or id (track listing only contains track IDs).",
           "required": false
         }
@@ -963,7 +964,8 @@
         },
         {
           "name": "service",
-          "type": "String",
+          "type": "Select",
+          "options": ["facebook_profile", "twitter", "myspace"],
           "info": "The type of the described connection. Possible values: facebook_profile, twitter, myspace.",
           "required": true
         }
@@ -1000,13 +1002,15 @@
         },
         {
           "name": "filter",
-          "type": "String",
+          "type": "Select",
+          "options": ["all", "public", "private"],
           "info": "Possible values: all, public, private.",
           "required": false
         },
         {
           "name": "license",
-          "type": "String",
+          "type": "Select",
+          "options": ["no-rights-reserved", "all-rights-reserved", "cc-by", "cc-by-nc", "cc-by-nd", "cc-by-sa", "cc-by-nc-nd", "cc-by-nc-sa"],
           "info": "Creative common license. Possible values: no-rights-reserved, all-rights-reserved, cc-by, cc-by-nc, cc-by-nd, cc-by-sa, cc-by-nc-nd, cc-by-nc-sa.",
           "required": false
         },
@@ -1036,13 +1040,13 @@
         },
         {
           "name": "createdAtFrom",
-          "type": "String",
+          "type": "DatePicker",
           "info": "(yyyy-mm-dd hh:mm:ss) return tracks created at this date or later.",
           "required": false
         },
         {
           "name": "createdAtTo",
-          "type": "String",
+          "type": "DatePicker",
           "info": "(yyyy-mm-dd hh:mm:ss) return tracks created at this date or earlier.",
           "required": false
         },
@@ -1390,19 +1394,28 @@
         },
         {
           "name": "playlistSharing",
-          "type": "String",
+          "type": "Select",
+          "options": ["public", "private"],
           "info": "Sharing type of the playlist. Possible values: public OR private.",
           "required": false
         },
         {
           "name": "tracks",
-          "type": "Array",
+          "type": "List",
           "info": "Array of tracks IDs to add to the playlist.",
-          "required": false
+          "required": false,
+          "structure":
+            {
+              "name": "trackId",
+              "type": "Number",
+              "info": "Id of the track",
+              "required": false
+            }
         },
         {
           "name": "embeddableBy",
-          "type": "String",
+          "type": "Select",
+          "options": ["all", "none"],
           "info": "Who can embed this playlist. Possible value: all OR me OR none.",
           "required": false
         },
@@ -1426,9 +1439,16 @@
         },
         {
           "name": "tagList",
-          "type": "String",
+          "type": "List",
           "info": "Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.",
-          "required": false
+          "required": false,
+          "structure":
+          {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag of the track",
+            "required": false
+          }
         },
         {
           "name": "labelId",
@@ -1486,7 +1506,8 @@
         },
         {
           "name": "playlistType",
-          "type": "String",
+          "type": "Select",
+          "options": ["ep single", "album", "compilation", "project files", "archive", "showcase", "demo", "sample pack", "other"],
           "info": "Playlist type. Possible values: ep single, album, compilation, project files, archive, showcase, demo, sample pack, other",
           "required": false
         }
@@ -1517,9 +1538,16 @@
         },
         {
           "name": "tracks",
-          "type": "Array",
+          "type": "List",
           "info": "Array of tracks IDs to add to the playlist.",
-          "required": false
+          "required": false,
+          "structure":
+          {
+            "name": "trackId",
+            "type": "Number",
+            "info": "Id of the track",
+            "required": false
+          }
         },
         {
           "name": "playlistTitle",
@@ -1529,13 +1557,15 @@
         },
         {
           "name": "playlistSharing",
-          "type": "String",
+          "type": "Select",
+          "options": ["public", "private"],
           "info": "Sharing type of the playlist. Possible values: public OR private.",
           "required": false
         },
         {
           "name": "embeddableBy",
-          "type": "String",
+          "type": "Select",
+          "options": ["all", "none"],
           "info": "Who can embed this playlist. Possible value: all OR me OR none.",
           "required": false
         },
@@ -1559,9 +1589,16 @@
         },
         {
           "name": "tagList",
-          "type": "String",
+          "type": "List",
           "info": "Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.",
-          "required": false
+          "required": false,
+          "structure":
+          {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag of the track",
+            "required": false
+          }
         },
         {
           "name": "labelId",
@@ -1619,7 +1656,8 @@
         },
         {
           "name": "playlistType",
-          "type": "String",
+          "type": "Select",
+          "options": ["ep single", "album", "compilation", "project files", "archive", "showcase", "demo", "sample pack", "other"],
           "info": "Playlist type. Possible values: ep single, album, compilation, project files, archive, showcase, demo, sample pack, other",
           "required": false
         }
@@ -1662,7 +1700,8 @@
         },
         {
           "name": "trackSharing",
-          "type": "String",
+          "type": "Select",
+          "options": ["public", "private"],
           "info": "Type of sharing. Possible value: public OR private.",
           "required": false
         },
@@ -1674,7 +1713,8 @@
         },
         {
           "name": "embeddableBy",
-          "type": "String",
+          "type": "Select",
+          "options": ["all", "none", "me"],
           "info": "Who can embed this track. Possible value: all OR me OR none.",
           "required": false
         },
@@ -1698,9 +1738,16 @@
         },
         {
           "name": "tagList",
-          "type": "String",
+          "type": "List",
           "info": "Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.",
-          "required": false
+          "required": false,
+          "structure":
+          {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag of the track",
+            "required": false
+          }
         },
         {
           "name": "labelId",
@@ -1752,13 +1799,15 @@
         },
         {
           "name": "trackType",
-          "type": "String",
+          "type": "Select",
+          "options": ["original", "remix", "live", "recording", "spoken", "podcast", "demo", "in progress", "stem", "loop", "sound effect", "sample", "other"],
           "info": "Track type. Possible values: original, remix, live, recording, spoken, podcast, demo, in progress, stem, loop, sound effect, sample, other",
           "required": false
         },
         {
           "name": "license",
-          "type": "String",
+          "type": "Select",
+          "options": ["no-rights-reserved", "all-rights-reserved", "cc-by", "cc-by-nc", "cc-by-nd", "cc-by-sa", "cc-by-nc-nd", "cc-by-nc-sa"],
           "info": "Creative common license. Possible values: no-rights-reserved, all-rights-reserved, cc-by, cc-by-nc, cc-by-nd, cc-by-sa, cc-by-nc-nd, cc-by-nc-sa",
           "required": false
         },
@@ -1825,13 +1874,15 @@
         },
         {
           "name": "trackSharing",
-          "type": "String",
+          "type": "Select",
+          "options": ["public", "private"],
           "info": "Type of sharing. Possible value: public OR private.",
           "required": false
         },
         {
           "name": "embeddableBy",
-          "type": "String",
+          "type": "Select",
+          "options": ["all", "me", "none"],
           "info": "Who can embed this track or playlist. Possible value: all OR me OR none.",
           "required": false
         },
@@ -1855,9 +1906,16 @@
         },
         {
           "name": "tagList",
-          "type": "String",
+          "type": "List",
           "info": "Contains a list of tags separated by spaces. Multiword tags are quoted in doublequotes.",
-          "required": false
+          "required": false,
+          "structure":
+          {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag of the track",
+            "required": false
+          }
         },
         {
           "name": "labelId",
@@ -1909,13 +1967,15 @@
         },
         {
           "name": "trackType",
-          "type": "String",
+          "type": "Select",
+          "options": ["original", "remix", "live", "recording", "spoken", "podcast", "demo", "in progress", "stem", "loop", "sound effect", "sample", "other"],
           "info": "Track type. Possible values: original, remix, live, recording, spoken, podcast, demo, in progress, stem, loop, sound effect, sample, other",
           "required": false
         },
         {
           "name": "license",
-          "type": "String",
+          "type": "Select",
+          "options": ["no-rights-reserved", "all-rights-reserved", "cc-by", "cc-by-nc", "cc-by-nd", "cc-by-sa", "cc-by-nc-nd", "cc-by-nc-sa"],
           "info": "Creative common license. Possible values: no-rights-reserved, all-rights-reserved, cc-by, cc-by-nc, cc-by-nd, cc-by-sa, cc-by-nc-nd, cc-by-nc-sa",
           "required": false
         },

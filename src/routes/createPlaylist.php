@@ -34,7 +34,12 @@ $app->post('/api/Soundcloud/createPlaylist', function ($request, $response, $arg
         $body['playlist']['genre'] = $post_data['args']['genre'];
     };
     if (isset($post_data['args']['tagList']) && (strlen($post_data['args']['tagList']) > 0)) {
-        $body['playlist']['tag_list'] = $post_data['args']['tagList'];
+
+        if (is_array($post_data['args']['tagList'])) {
+            $body['playlist']['tag_list'] = implode(',', $post_data['args']['tagList']);
+        } else {
+            $body['playlist']['tag_list'] = $post_data['args']['tagList'];
+        }
     };
     if (isset($post_data['args']['labelId']) && (strlen($post_data['args']['labelId']) > 0)) {
         $body['playlist']['label_id'] = $post_data['args']['labelId'];
