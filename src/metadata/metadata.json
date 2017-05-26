@@ -1446,8 +1446,7 @@
           {
             "name": "tag",
             "type": "String",
-            "info": "Tag of the track",
-            "required": false
+            "info": "Tag of the track"
           }
         },
         {
@@ -1545,8 +1544,7 @@
           {
             "name": "trackId",
             "type": "Number",
-            "info": "Id of the track",
-            "required": false
+            "info": "Id of the track"
           }
         },
         {
@@ -1596,8 +1594,7 @@
           {
             "name": "tag",
             "type": "String",
-            "info": "Tag of the track",
-            "required": false
+            "info": "Tag of the track"
           }
         },
         {
@@ -1745,8 +1742,7 @@
           {
             "name": "tag",
             "type": "String",
-            "info": "Tag of the track",
-            "required": false
+            "info": "Tag of the track"
           }
         },
         {
@@ -1913,8 +1909,7 @@
           {
             "name": "tag",
             "type": "String",
-            "info": "Tag of the track",
-            "required": false
+            "info": "Tag of the track"
           }
         },
         {
