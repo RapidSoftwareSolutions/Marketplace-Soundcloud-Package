@@ -53,6 +53,13 @@
           "type": "String",
           "info": "The authorization code obtained when user is sent to redirectUri.",
           "required": true
+				},
+				{
+          "name": "grantType",
+					"type": "Select",
+					"options": ["authorization_code", "refresh_token", "password", "client_credentials"],
+          "info": "(authorization_code, refresh_token, password, client_credentials)",
+          "required": false
         }
       ],
       "callbacks": [{
@@ -902,19 +909,22 @@
         },
         {
           "name": "autoPlay",
-          "type": "Boolean",
+					"type": "Select",
+					"options": ["true", "false"],
           "info": "Whether the widget plays on load. Format: true OR false(default).",
           "required": false
         },
         {
           "name": "showComments",
-          "type": "Boolean",
+					"type": "Select",
+					"options": ["true", "false"],
           "info": "Whether the player displays timed comments. Format: true(default) OR false.",
           "required": false
         },
         {
           "name": "iframe",
-          "type": "Boolean",
+					"type": "Select",
+					"options": ["true", "false"],
           "info": "Whether the new HTML5 Iframe-based Widget or the old Adobe Flash Widget will be returned. Format: true(default) OR false.",
           "required": false
         }
@@ -1002,9 +1012,15 @@
         },
         {
           "name": "tags",
-          "type": "String",
+          "type": "List",
           "info": "A comma separated list of tags.",
-          "required": false
+					"required": false,
+					"structure":
+					{
+						"name": "tag",
+            "type": "String",
+            "info": "Tag of the track"
+					}
         },
         {
           "name": "filter",
@@ -1016,7 +1032,7 @@
         {
           "name": "license",
           "type": "Select",
-          "options": ["no-rights-reserved", "all-rights-reserved", "cc-by", "cc-by-nc", "cc-by-nd", "cc-by-sa", "cc-by-nc-nd", "cc-by-nc-sa"],
+          "options": ["cc-by", "cc-by-nd", "cc-by-sa", "cc-by-nc-nd", "cc-by-nc-sa"],
           "info": "Creative common license. Possible values: no-rights-reserved, all-rights-reserved, cc-by, cc-by-nc, cc-by-nd, cc-by-sa, cc-by-nc-nd, cc-by-nc-sa.",
           "required": false
         },
@@ -1058,21 +1074,39 @@
         },
         {
           "name": "ids",
-          "type": "String",
+          "type": "List",
           "info": "A comma separated list of track ids to filter on.",
-          "required": false
+					"required": false,
+					"structure":
+          {
+            "name": "id",
+            "type": "String",
+            "info": "Id of the track"
+          }
         },
         {
           "name": "genres",
-          "type": "String",
+          "type": "List",
           "info": "A comma separated list of genres.",
-          "required": false
+					"required": false,
+					"structure":
+          {
+            "name": "genre",
+            "type": "String",
+            "info": "Genre of the track"
+          }
         },
         {
           "name": "types",
-          "type": "String",
+          "type": "List",
           "info": "A comma separated list of types.",
-          "required": false
+					"required": false,
+					"structure":
+          {
+            "name": "type",
+            "type": "String",
+            "info": "Type of the track"
+          }
         }
       ],
      "callbacks": [{
@@ -1085,7 +1119,7 @@
     },
     {
       "name": "getSingleTrack",
-      "description": "Gets information about single playlist.",
+      "description": "Gets information about single track.",
       "args": [
         {
           "name": "clientId",
@@ -1197,7 +1231,7 @@
     },
     {
       "name": "deleteTrackSingleComment",
-      "description": "Adds comment to the track.",
+      "description": "Delete comment to the track.",
       "args": [
         {
           "name": "accessToken",
@@ -1422,7 +1456,7 @@
           "name": "embeddableBy",
           "type": "Select",
           "options": ["all", "none"],
-          "info": "Who can embed this playlist. Possible value: all OR me OR none.",
+          "info": "Who can embed this playlist. Possible value: all OR none.",
           "required": false
         },
         {
@@ -1493,13 +1527,15 @@
         },
         {
           "name": "streamable",
-          "type": "Boolean",
+					"type": "Select",
+          "options": ["true", "false"],
           "info": "Streamable via API.",
           "required": false
         },
         {
           "name": "downloadable",
-          "type": "Boolean",
+          "type": "Select",
+          "options": ["true", "false"],
           "info": "Downloadable",
           "required": false
         },
@@ -1527,7 +1563,7 @@
     },
     {
       "name": "updatePlaylist",
-      "description": "Adds track to playlist.",
+      "description": "Update track to playlist.",
       "args": [
         {
           "name": "accessToken",
@@ -1641,13 +1677,15 @@
         },
         {
           "name": "streamable",
-          "type": "Boolean",
+          "type": "Select",
+          "options": ["true", "false"],
           "info": "Streamable via API.",
           "required": false
         },
         {
           "name": "downloadable",
-          "type": "Boolean",
+          "type": "Select",
+          "options": ["true", "false"],
           "info": "Downloadable",
           "required": false
         },
@@ -1717,7 +1755,7 @@
         {
           "name": "embeddableBy",
           "type": "Select",
-          "options": ["all", "none", "me"],
+          "options": ["all", "none"],
           "info": "Who can embed this track. Possible value: all OR me OR none.",
           "required": false
         },
@@ -1789,13 +1827,15 @@
         },
         {
           "name": "streamable",
-          "type": "Boolean",
+          "type": "Select",
+          "options": ["true", "false"],
           "info": "Streamable via API.",
           "required": false
         },
         {
           "name": "downloadable",
-          "type": "Boolean",
+          "type": "Select",
+          "options": ["true", "false"],
           "info": "Downloadable",
           "required": false
         },
@@ -1821,7 +1861,8 @@
         },
         {
           "name": "commentable",
-          "type": "Boolean",
+          "type": "Select",
+          "options": ["true", "false"],
           "info": "Track commentable",
           "required": false
         },
@@ -1884,7 +1925,7 @@
         {
           "name": "embeddableBy",
           "type": "Select",
-          "options": ["all", "me", "none"],
+          "options": ["all", "none"],
           "info": "Who can embed this track or playlist. Possible value: all OR me OR none.",
           "required": false
         },
@@ -1956,13 +1997,15 @@
         },
         {
           "name": "streamable",
-          "type": "Boolean",
+          "type": "Select",
+          "options": ["true", "false"],
           "info": "Streamable via API.",
           "required": false
         },
         {
           "name": "downloadable",
-          "type": "Boolean",
+          "type": "Select",
+					"options": ["true", "false"],
           "info": "Downloadable",
           "required": false
         },
@@ -1988,7 +2031,8 @@
         },
         {
           "name": "commentable",
-          "type": "Boolean",
+					"type": "Select",
+          "options": ["true", "false"],
           "info": "Track commentable",
           "required": false
         },

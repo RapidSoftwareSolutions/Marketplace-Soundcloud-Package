@@ -1,7 +1,7 @@
 [![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Soundcloud/functions?utm_source=RapidAPIGitHub_SoundcloudFunctions&utm_medium=button&utm_content=RapidAPI_GitHub) 
 # Soundcloud Package
 Integrate SoundCloud user, track and playlist information.
-* Domain: soundcloud.com
+* Domain: [soundcloud.com](https://soundcloud.com/) 
 * Credentials: clientId, clientSecret
 
 ## How to get credentials: 
@@ -102,7 +102,7 @@ Gets list of comments from this user.
 | userId  | Number     | ID of the user.
 
 ## Soundcloud.getTracksLikedByUser
-Gets list of comments from this user.
+Gets list of tracks liked from this user.
 
 | Field   | Type       | Description
 |---------|------------|----------

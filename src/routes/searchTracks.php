@@ -26,22 +26,22 @@ $app->post('/api/Soundcloud/searchTracks', function ($request, $response, $args)
     if (isset($post_data['args']['license'])) {
         $query_str .= '&license=' . $post_data['args']['license'];
     };
-    if (isset($post_data['args']['bpm[from]'])) {
-        $query_str .= '&bpm[from]=' . $post_data['args']['bpmFrom'];
+    if (isset($post_data['args']['bpmFrom'])) {
+				$query_str .= '&bpm[from]=' . $post_data['args']['bpmFrom'];
     };
-    if (isset($post_data['args']['bpm[to]'])) {
+    if (isset($post_data['args']['bpmTo'])) {
         $query_str .= '&bpm[to]=' . $post_data['args']['bpmTo'];
     };
-    if (isset($post_data['args']['duration[from]'])) {
+    if (isset($post_data['args']['durationFrom'])) {
         $query_str .= '&duration[from]=' . $post_data['args']['durationFrom'];
     };
-    if (isset($post_data['args']['duration[to]'])) {
+    if (isset($post_data['args']['durationTo'])) {
         $query_str .= '&duration[to]=' . $post_data['args']['durationTo'];
     };
-    if (isset($post_data['args']['created_at[from]'])) {
+    if (isset($post_data['args']['createdAtFrom'])) {
         $query_str .= '&created_at[from]=' . $post_data['args']['createdAtFrom'];
     };
-    if (isset($post_data['args']['created_at[to]'])) {
+    if (isset($post_data['args']['createdAtTo'])) {
         $query_str .= '&created_at[to]=' . $post_data['args']['createdAtTo'];
     };
     if (isset($post_data['args']['ids'])) {
@@ -92,11 +92,11 @@ $app->post('/api/Soundcloud/searchTracks', function ($request, $response, $args)
 
         $responseBody = $exception->getResponse()->getBody(true);
         $result['callback'] = 'error';
-        $result['contextWrites']['to'] = json_decode($responseBody);
+				$result['contextWrites']['to'] = json_decode($responseBody);
 
     }
 
 
-    return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($result);
-
+		return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($result);
+		
 });

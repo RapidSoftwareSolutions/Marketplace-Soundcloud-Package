@@ -35,7 +35,7 @@ $app->post('/api/Soundcloud/updateUser', function ($request, $response, $args) {
     };
     if (isset($post_data['args']['websiteTitle']) && (strlen($post_data['args']['websiteTitle'])>0)) {
         $body[] = [
-            'name' => 'user[website-title]',
+            'name' => 'user[website_title]',
             'contents' => $post_data['args']['websiteTitle']
         ];
     };

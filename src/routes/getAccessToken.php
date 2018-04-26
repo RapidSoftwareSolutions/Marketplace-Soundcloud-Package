@@ -17,8 +17,8 @@ $app->post('/api/Soundcloud/getAccessToken', function ($request, $response, $arg
     $body['client_id'] = $post_data['args']['clientId'];
     $body['client_secret'] = $post_data['args']['clientSecret'];
     $body['redirect_uri'] = $post_data['args']['redirectUri'];
-    $body['grant_type'] = 'authorization_code';
-    $body['code'] = $post_data['args']['code'];
+    $body['grant_type'] = $post_data['args']['grantType'];
+		$body['code'] = $post_data['args']['code'];
 
     //requesting remote API
     try {
